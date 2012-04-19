@@ -36,6 +36,8 @@ plugins=(git github cap rails ruby svn brew rvm)
 
 source $ZSH/oh-my-zsh.sh
 
+export BRIEFCASE_SECRETS_PATH=~/Dropbox/Documents/briefcase_secrets
+
 # Customize to your needs...
 export PATH=/Users/tedkulp/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 

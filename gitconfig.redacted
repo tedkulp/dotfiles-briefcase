@@ -1,0 +1,36 @@
+[user]
+	name = # briefcase(git_user_name)
+	email = # briefcase(git_user_email)
+	gmail = # briefcase(git_user_gmail)
+
+[color]
+	branch = auto
+	status = auto
+
+[github]
+	user = # briefcase(git_github_usr)
+	token = # briefcase(git_github_token)
+
+[apply]
+	whitespace = nowarn
+
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = # briefcase(git_sendemail_smtpuser)
+	smtpserverport = 587
+	chainreplyto = false
+[pivotal]
+	api-token = # briefcase(git_pivotal_apitoken)
+	full-name = # briefcase(git_pivotal_fullname)
+[core]
+	editor = /usr/bin/vim
+
+[alias]
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = false
+[init]
+	templatedir = ~/.git_template
