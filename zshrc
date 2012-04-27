@@ -22,6 +22,20 @@ alias knife="nocorrect knife"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
+#if [ "$TERM" != "dumb" ]; then
+  #export LS_OPTIONS='--color=auto'
+  #eval `gdircolors ~/.dir_colors`
+#fi
+
+# Color listing
+eval $(gdircolors ~/.dir_colors)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+export LS_OPTIONS='--color'
+alias l='gls $LS_OPTIONS'
+alias ll='gls $LS_OPTIONS -lh'
+alias lll='gls $LS_OPTIONS -alh'
+alias sl='gls $LS_OPTIONS' # often screw this up
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
