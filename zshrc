@@ -37,6 +37,8 @@ alias ll='gls $LS_OPTIONS -lh'
 alias lll='gls $LS_OPTIONS -alh'
 alias sl='gls $LS_OPTIONS' # often screw this up
 
+alias myip='curl -s ifconfig.me | tee /dev/stderr | pbcopy'
+
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
